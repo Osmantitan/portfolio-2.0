@@ -1,14 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
+        <title>Hi I'm Osman | Portfolio</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
     </head>
     <body>
 
         <video class="bg-video" autoplay loop muted playsinline>
-            <source src="background.mp4" type="video/mp4">
+            <source src="{% static 'background.mp4' %}" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
 
@@ -20,9 +22,9 @@
                     <span></span>
                 </button>
                 <div class="dropdown" id="dropdown">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="contact.html">Contact</a>
+                    <a href="/">Home</a>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
                 </div>
             </div>
         </nav>
@@ -52,6 +54,6 @@
             <a href="projects.html" class="btn-primary">View My Projects</a>
         </main>
 
-        <script src="script.js"></script>
+        <script src="{% static 'script.js' %}"></script>
     </body>
 </html>

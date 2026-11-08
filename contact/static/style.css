@@ -126,6 +126,13 @@ h1 {
     -webkit-text-fill-color: transparent;
 }
 
+h1 .w {
+    background: linear-gradient(135deg, #a05c67, #fb7185, #f59e0b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .tag {
     background: #18080c;
     border: 1px solid #f43f5e;
@@ -249,3 +256,7 @@ h1 {
         top: 1rem;
     }
 }
+.tag i {
+    margin-right: 8px;
+    color: #fb347d; /* use the same red as your tag borders */
+  }

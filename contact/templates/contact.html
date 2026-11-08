@@ -1,15 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
 
     <video class="bg-video" autoplay loop muted playsinline>
-        <source src="background.mp4" type="video/mp4">
+        <source src="{% static 'background.mp4' %}" type="video/mp4">
     </video>
     <div class="video-overlay"></div>
 
@@ -21,9 +22,10 @@
                 <span></span>
             </button>
             <div class="dropdown" id="dropdown">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="/">Home</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+                
             </div>
         </div>
     </nav>
@@ -32,7 +34,8 @@
             <span class="w" style="--d:1">Contact</span>
         </h1>
 
-        <form class="contact-form" action="http://127.0.0.1:5000/contact" method="post">
+        <form class="contact-form" method="post">
+            {% csrf_token %}
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -46,6 +49,6 @@
         </form>
     </main>
 
-    <script src="script.js"></script>
+    <script src="{% static 'script.js' %}"></script>
 </body>
 </html>

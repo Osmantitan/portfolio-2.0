@@ -1,14 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | Osman's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body> 
     <video class="bg-video" autoplay loop muted playsinline>
-    <source src="background.mp4" type="video/mp4">
+    <source src="{% static 'background.mp4' %}" type="video/mp4">
 </video>
 <div class="video-overlay"></div>
 
@@ -21,9 +23,9 @@
         </button>
 
         <div class="dropdown" id="dropdown">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+            <a href="/">Home</a>
+            <a href="/about/">About</a>
+            <a href="/contact/">Contact</a>
         </div>
     </div>
 </nav>
@@ -42,21 +44,21 @@
     </p> 
     <p>
         I know basic networking, proficient in IT support, make websites for fun, AI theoretical workings, 
-            and last but not least intermediate SQL skills mostly related to data analytics, which I'm currently learning.</p>
-        </p>
-        <p>As time goes by, I'm certain that my skills and my curiosity for tech will continue to grow.</p>
+            and last but not least intermediate SQL skills mostly related to data analytics, which I'm currently learning.
+    </p>
+    <p>As time goes by, I'm certain that my skills and my curiosity for tech will continue to grow.</p>
 
         <div class="tech-tags">
-            <span class="tag">🌐 Web Development</span>
+            <span class="tag"><i class="fa-solid fa-code"></i> Web Development</span>
 
-            <span class="tag">🔌 Networking</span>
+            <span class="tag"><i class="fa-solid fa-network-wired"></i> Networking</span>
 
-            <span class="tag">🗄️ Databases</span>
+            <span class="tag"><i class="fa-solid fa-database"></i> Databases</span>
 
-            <span class="tag">🧠 Artificial Intelligence</span>
+            <span class="tag"><i class="fa-solid fa-brain"></i> Artificial Intelligence</span>
         </div>
     </main>
 
-    <script src="script.js"></script>
+    <script src="{% static 'script.js' %}"></script>
 </body>
 </html>
